@@ -4,22 +4,24 @@ import (
 	"encoding/json"
 )
 
-func Stob(s Session) ([]byte, error) {
-	return json.Marshal(s)
+func Stob(s Session) []byte {
+	b, _ := json.Marshal(s)
+	return b
 }
 
-func Btos(b []byte) (Session, error) {
-	s := Session{}
-	err := json.Unmarshal(b, &s)
-	return s, err
+func Btos(b []byte) Session {
+	var s Session
+	json.Unmarshal(b, &s)
+	return s
 }
 
-func Ctob(c Cubby) ([]byte, error) {
-	return json.Marshal(c)
+func Otob(o Order) []byte {
+	b, _ := json.Marshal(o)
+	return b
 }
 
-func Btoc(b []byte) (Cubby, error) {
-	c := Cubby{}
-	err := json.Unmarshal(b, &c)
-	return c, err
+func Btoo(b []byte) Order {
+	var o Order
+	json.Unmarshal(b, &o)
+	return o
 }
