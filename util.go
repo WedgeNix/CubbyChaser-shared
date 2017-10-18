@@ -5,3 +5,9 @@ func Must(e error) {
 		panic(e)
 	}
 }
+
+func Try(e error) {
+	if e != nil {
+		println(e.Error())
+	}
+}

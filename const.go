@@ -1,3 +1,7 @@
 package shared
 
-const ()
+import "time"
+
+const (
+	Timeout = 60 * time.Second
+)

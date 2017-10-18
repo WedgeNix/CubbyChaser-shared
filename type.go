@@ -110,6 +110,8 @@ type AdvancedOptions struct {
 	BillToCountryCode interface{}
 }
 
+type Queue map[int]int
+
 type Session struct {
 	ID      int
 	Cubbies []Order
